@@ -1,8 +1,23 @@
+import CarouselApp from "../components/CarouselApp"
+
+
 export const InitialPage = () => {
-    return (
-        <section>
-            <h1>InitialPage</h1>
-            <p>Tu lista de notas personal. Registrate o Inicia sesion para empezar a disfrutar del servicio</p> 
+   
+
+        return (
+            
+            <section className="PaginaInicio">
+            <h1>Tu lista de notas personal.</h1> 
+            <div><CarouselApp /></div>
+            
+            <h2>Distintas categorias de Notas como; Viajes, Rutas, Hoteles..</h2> 
         </section>
-    )
+        )
+
+    
+    
+ 
+
+        
+    
 }

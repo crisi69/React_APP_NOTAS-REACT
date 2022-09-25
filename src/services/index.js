@@ -12,7 +12,7 @@ export const registerUserService = async ({ username, email, password }) => {
     });
 
     const json = await response.json();
-    console.log(json);
+
     
     if (!response.ok) {
         throw new Error(json.message);
@@ -30,11 +30,29 @@ export const loginUserService = async ({email, password}) => {
     });
 
     const json = await response.json();
-    console.log(json);
+    
     
     if (!response.ok) {
         throw new Error(json.message);
     }
 
     return json.data
+    
 }
+
+export const getMyUserDataService = async ({ token }) => {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND}/users`, {
+        headers: {
+            Authorization: token,
+        },
+    });
+
+    const json = await response.json();
+
+    if (!response.ok) {
+        throw new Error(json.message)
+    }
+    return json.data;
+    
+};
+ 

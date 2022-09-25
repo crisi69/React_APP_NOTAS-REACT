@@ -1,13 +1,22 @@
 import { Auth } from './Auth'
-import { Link } from "react-router-dom"
-export const Header = () => {
-    return (
-    <header>
-        <h1><Link to="/">APP NOTAS DE TEXTO</Link></h1>
+import banner from '../assets/banner.jpg'
 
-        <nav>
+
+
+export const Header = () => {
+  
+  return (
+    
+    <header>
+      <img
+      src={banner}
+      alt='banner'
+      className='banner'
+      ></img>
+      <nav>
         <Auth />
       </nav>
+      
     </header>
-    );   
+  );   
 };
