@@ -91,11 +91,21 @@ main {
   transition: color .5s;
   transition: background-color .5s;
 }
-article {
+.articleNoteUSer {
+  display: grid;
   margin: 1rem;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
+  border-color: black; 
+  color: black;
+  
+}
+.articleNoteSearch {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255);
   border-color: black; 
   color: black;
   display: inline-block;
@@ -114,19 +124,15 @@ article {
   
   
 }
-.ulActions li img {
-  
-  width: 5%;
-  padding: 10px;
-  
-}
-.ulActions li img{
 
+.ulActions li img {
   background-color: rgb(219, 61, 74);
   transition: background-color .5s;
   border-radius: 2rem;
-  
-  
+  width: 5%;
+  padding: 10px;
+  width: 5%;
+  padding: 10px;
 }
 .SearchNotes{
   font-size: 20px;
@@ -136,7 +142,8 @@ article {
 
 }
 .liSearch {
-  display: grid;
+  display: grid
+  
   
   
   

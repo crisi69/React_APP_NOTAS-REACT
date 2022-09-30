@@ -1,6 +1,6 @@
 export const Note = ({ note }) => {
   return (
-    <article>
+    <article className="articleNoteSearch">
       <p>
         <strong>Site:</strong> {note.title}
       </p>

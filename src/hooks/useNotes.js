@@ -22,5 +22,9 @@ export const useNotes = () => {
     };
     if (token) loadNotes();
   }, [token]);
-  return { notes, loading, error };
+
+  const removeNote = (id) => {
+    setNotes(notes.filter((note) => notes.id !== id));
+  };
+  return { notes, loading, error, removeNote };
 };

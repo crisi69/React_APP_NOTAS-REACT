@@ -21,5 +21,9 @@ export const useAllNotes = () => {
     };
     loadAllNotes();
   }, []);
-  return { notes, loading, error };
+
+  const removeNote = (id) => {
+    setNotes(notes.filter((note) => note.id !== id));
+  };
+  return { notes, loading, error, removeNote };
 };

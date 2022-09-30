@@ -21,6 +21,8 @@ export const useNote = (id) => {
 
     loadNote();
   }, [id]);
-
-  return { note, loading, error };
+  const removeNote = (id) => {
+    setNote(note.filter((not) => not.id !== id));
+  };
+  return { note, loading, error, removeNote };
 };

@@ -5,7 +5,7 @@ import { useNotes } from "../hooks/useNotes";
 import { NoteList } from "../components/NoteList";
 
 export const ListNotesPage = () => {
-  const { notes, loading, error } = useNotes();
+  const { notes, loading, error, removeNote } = useNotes();
   const { token } = useContext(AuthContext);
 
   if (!token) return <Navigate to="/login" />;
@@ -13,11 +13,10 @@ export const ListNotesPage = () => {
   if (loading) return <p>Loading Notes</p>;
   if (error) return <p>{error}</p>;
 
-  console.log(notes);
   return (
     <section>
       <h1>Latest Notes</h1>
-      <NoteList notes={notes} />
+      <NoteList notes={notes} removeNote={removeNote} />
     </section>
   );
 };
