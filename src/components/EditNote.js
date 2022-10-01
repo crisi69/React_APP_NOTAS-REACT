@@ -1,9 +1,9 @@
 import { useState, useContext } from "react";
-import { sendNoteService, editNoteService } from "../services";
+import { editNoteService } from "../services";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
-export const NewNote = () => {
+export const EditNote = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
@@ -11,11 +11,12 @@ export const NewNote = () => {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const { token } = useContext(AuthContext);
+  const { id } = useParams();
 
   const handleForm = async (e) => {
     e.preventDefault();
     try {
-      await sendNoteService({ token, title, description, category });
+      await editNoteService({ token, title, description, category, id });
       setSending(true);
       navigate("/notes");
     } catch (error) {
@@ -24,10 +25,11 @@ export const NewNote = () => {
       setSending(false);
     }
   };
+
   return (
     <form onSubmit={handleForm}>
       <fieldset>
-        <h1>New Note</h1>
+        <h1>Edit Note</h1>
         <label htmlFor="title">Title </label>
         <input
           type="text"

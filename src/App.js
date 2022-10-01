@@ -8,6 +8,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { NewNotePage } from "./pages/NewNotePage";
 import { ListNotesPage } from "./pages/ListNotesPage";
 import { GetNotePage } from "./pages/GetNotePage";
+import { EditNotePage } from "./pages/EditNotePage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/note" element={<NewNotePage />} />
         <Route path="/notes" element={<ListNotesPage />} />
         <Route path="/notes/:id" element={<GetNotePage />} />
+        <Route path="/edit/:id" element={<EditNotePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

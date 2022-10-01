@@ -67,30 +67,7 @@ main {
   transition: background-color .5s;
 }
 
-.buttonlogout {
-  background: border-box;
-  width: 2.9%;
-  height: 51%;
-  margin: 20px;
-  padding: auto;
-  border-radius: 2rem;
-  color: rgb(219, 61, 74);
-  background-color: black;
-}
 
-.buttonlogout:hover {
-  background: border-box;
-  width: 2.9%;
-  height: 51%;
-  margin: 20px;
-  padding: auto;
-  border-radius: 2rem;
-  background: border-box;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
-  transition: color .5s;
-  transition: background-color .5s;
-}
 .articleNoteUSer {
   display: grid;
   margin: 1rem;

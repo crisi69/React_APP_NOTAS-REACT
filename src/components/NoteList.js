@@ -37,7 +37,6 @@ export const NoteList = ({ notes, removeNote }) => {
             alt="logOutPng"
             className="icoDeleteNote"
           ></img>
-
           <NoteUser note={note} />
         </li>
       ))}

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useNote } from "../hooks/useNote";
 import { Note } from "../components/Note";
 import { ErrorMessage } from "../components/ErrorMessage";
@@ -13,6 +13,7 @@ export const GetNotePage = () => {
     <section>
       <h1>Note</h1>
       <Note note={note} />
+      <Link to="/notes">Return to Note List</Link>
     </section>
   );
 };
