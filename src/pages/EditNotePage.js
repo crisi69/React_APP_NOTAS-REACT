@@ -9,7 +9,9 @@ export const EditNotePage = () => {
   if (!token) return <Navigate to="/login" />;
   return (
     <section>
+      <hr></hr>
       <EditNote />
+      <hr></hr>
     </section>
   );
 };

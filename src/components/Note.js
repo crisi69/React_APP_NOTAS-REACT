@@ -1,6 +1,6 @@
 export const Note = ({ note }) => {
   return (
-    <article className="articleNoteSearch">
+    <section className="articleNoteSearch">
       <p>
         <strong>Site:</strong> {note.title}
       </p>
@@ -11,11 +11,15 @@ export const Note = ({ note }) => {
         <strong>Description:</strong> {note.description}
       </p>
       <p>
-        <strong>Photo:</strong> {note.photo}
-      </p>
-      <p>
         <strong>Day:</strong> {new Date(note.createdAt).toLocaleString()}
       </p>
-    </article>
+      {note.image ? (
+        <img
+          src={`${process.env.REACT_APP_BACKEND}/${note.image}`}
+          alt={note.text}
+        ></img>
+      ) : null}
+      <hr></hr>
+    </section>
   );
 };

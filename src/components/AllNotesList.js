@@ -1,7 +1,6 @@
 import { Note } from "../components/Note";
 
 export const AllNotesList = ({ notes }) => {
-  console.log(notes);
   return notes.length ? (
     <ul>
       {notes.map((note) => (

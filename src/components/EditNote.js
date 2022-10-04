@@ -28,29 +28,9 @@ export const EditNote = () => {
 
   return (
     <form onSubmit={handleForm}>
+      <h2>Edit Note</h2>
       <fieldset>
-        <h1>Edit Note</h1>
-        <label htmlFor="title">Title </label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          onChange={(e) => setTitle(e.target.value)}
-          required
-        ></input>
-      </fieldset>
-      <fieldset>
-        <label htmlFor="description">Description </label>
-        <input
-          type="text"
-          id="description"
-          name="description"
-          onChange={(e) => setDescription(e.target.value)}
-          required
-        ></input>
-      </fieldset>
-      <fieldset>
-        <label htmlFor="category">Category </label>
+        <label htmlFor="category"> </label>
         <select
           type="text"
           id="category"
@@ -64,6 +44,30 @@ export const EditNote = () => {
           <option value="Rutas">Rutas</option>
           <option value="Campings">Campings</option>
         </select>
+        <p>Category</p>
+      </fieldset>
+      <fieldset>
+        <label htmlFor="title"></label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          onChange={(e) => setTitle(e.target.value)}
+          required
+          placeholder="Title"
+        ></input>
+      </fieldset>
+      <fieldset>
+        <label htmlFor="description"></label>
+        <textarea
+          className="description"
+          type="text"
+          id="description"
+          name="description"
+          onChange={(e) => setDescription(e.target.value)}
+          required
+          placeholder="Description"
+        ></textarea>
       </fieldset>
 
       <button>Send Note</button>

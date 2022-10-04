@@ -50,20 +50,13 @@ export const getMyUserDataService = async ({ token }) => {
   return json.data;
 };
 
-export const sendNoteService = async ({
-  token,
-  title,
-  description,
-  category,
-}) => {
+export const sendNoteService = async ({ data, token }) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/notes`, {
     method: "POST",
+    body: data,
     headers: {
       Authorization: token,
-      Accept: "application/json",
-      "Content-Type": "application/json",
     },
-    body: JSON.stringify({ title, description, category }),
   });
 
   const json = await response.json();
@@ -71,6 +64,7 @@ export const sendNoteService = async ({
   if (!response.ok) {
     throw new Error(json.message);
   }
+  return json.data;
 };
 
 export const getUserNotesService = async (token) => {

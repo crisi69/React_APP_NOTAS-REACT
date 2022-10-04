@@ -9,7 +9,9 @@ export const NewNotePage = () => {
   if (!token) return <Navigate to="/login" />;
   return (
     <section>
+      <hr></hr>
       <NewNote />
+      <hr></hr>
     </section>
   );
 };

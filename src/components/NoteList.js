@@ -1,6 +1,5 @@
 import { NoteUser } from "./NoteUser";
 import { Link, useNavigate } from "react-router-dom";
-import seeNote from "../assets/seeNote.png";
 import editNote from "../assets/editNote.png";
 import deleteNoteImg from "../assets/deleteNote.png";
 import { deleteNoteService } from "../services/index";
@@ -22,9 +21,6 @@ export const NoteList = ({ notes, removeNote }) => {
     <ul className="ulActions">
       {notes.map((note) => (
         <li key={note.id}>
-          <Link to={`/notes/${note.id}`}>
-            <img src={seeNote} alt="seeNotePng" className="icoSeeNote"></img>
-          </Link>
           <Link to={`/edit/${note.id}`}>
             <img src={editNote} alt="editNotePng" className="icoEditNote"></img>
           </Link>

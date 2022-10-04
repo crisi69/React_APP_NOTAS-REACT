@@ -1,4 +1,3 @@
-import CarouselApp from "../components/CarouselApp";
 import { useAllNotes } from "../hooks/useAllNotes";
 import { SearchNotes } from "../components/ShearchNotes";
 
@@ -10,12 +9,10 @@ export const InitialPage = () => {
 
   return (
     <section className="PaginaInicio">
-      <hr />
-      <div>
-        <CarouselApp />
-      </div>
-      <h3>Distintas categorias de Notas como; Viajes, Rutas, Hoteles..</h3>
-      <hr />
+      <div></div>
+      <aside></aside>
+      <h3>Different categories of Notes...</h3>
+      <h4>Hoteles, Restaurantes, Campings, Rutas.</h4>
 
       <SearchNotes notes={notes} />
     </section>

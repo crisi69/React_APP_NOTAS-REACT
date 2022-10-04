@@ -23,9 +23,11 @@ export const SearchNotes = () => {
         onChange={(e) => setSearch(e.target.value)}
         type="text"
         placeholder="Search Notes"
-        className="SearchNotes"
+        className="inputSearchNotes"
       ></input>
+
       <ul>
+        <hr></hr>
         {results.map((note) => (
           <li key={note.id} className="liSearch">
             <Note note={note}></Note>

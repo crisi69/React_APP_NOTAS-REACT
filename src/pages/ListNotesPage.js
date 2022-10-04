@@ -15,7 +15,9 @@ export const ListNotesPage = () => {
 
   return (
     <section>
-      <h1>Latest Notes</h1>
+      <hr></hr>
+      <h1>My Notes</h1>
+
       <NoteList notes={notes} removeNote={removeNote} />
     </section>
   );
