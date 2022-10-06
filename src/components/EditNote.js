@@ -7,37 +7,32 @@ export const EditNote = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [category, setCategory] = useState("");
+  const [image, setImage] = useState();
   const { token } = useContext(AuthContext);
   const { id } = useParams();
 
   const handleForm = async (e) => {
     e.preventDefault();
     try {
-      await editNoteService({ token, title, description, category, id });
+      const data = new FormData(e.target);
+      const note = editNoteService({ data, token, id });
+      console.log(note);
       setSending(true);
-      navigate("/notes");
+      e.target.reset();
+      setImage(null);
+      navigate("/");
     } catch (error) {
       setError(error.message);
     } finally {
       setSending(false);
     }
   };
-
   return (
     <form onSubmit={handleForm}>
       <h2>Edit Note</h2>
       <fieldset>
         <label htmlFor="category"> </label>
-        <select
-          type="text"
-          id="category"
-          name="category"
-          onChange={(e) => setCategory(e.target.value)}
-          required
-        >
+        <select type="text" id="category" name="category" required>
           <option value=""></option>
           <option value="Hoteles">Hoteles</option>
           <option value="Restaurantes">Restaurantes</option>
@@ -52,7 +47,6 @@ export const EditNote = () => {
           type="text"
           id="title"
           name="title"
-          onChange={(e) => setTitle(e.target.value)}
           required
           placeholder="Title"
         ></input>
@@ -64,10 +58,30 @@ export const EditNote = () => {
           type="text"
           id="description"
           name="description"
-          onChange={(e) => setDescription(e.target.value)}
           required
           placeholder="Description"
         ></textarea>
+      </fieldset>
+      <fieldset>
+        <label htmlFor="image"></label>
+        <input
+          type="file"
+          id="image"
+          name="image"
+          required
+          placeholder="Image"
+          accept="Image/*"
+          onChange={(e) => setImage(e.target.files[0])}
+        ></input>
+        {image ? (
+          <figure>
+            <img
+              src={URL.createObjectURL(image)}
+              alt="Preview"
+              style={{ width: "100px" }}
+            ></img>
+          </figure>
+        ) : null}
       </fieldset>
 
       <button>Send Note</button>

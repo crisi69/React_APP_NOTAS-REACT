@@ -117,21 +117,13 @@ export const deleteNoteService = async ({ id, token }) => {
   }
 };
 
-export const editNoteService = async ({
-  token,
-  title,
-  description,
-  category,
-  id,
-}) => {
+export const editNoteService = async ({ token, data, id }) => {
   const response = await fetch(`${process.env.REACT_APP_BACKEND}/notes/${id}`, {
     method: "PUT",
+    body: data,
     headers: {
       Authorization: token,
-      Accept: "application/json",
-      "Content-Type": "application/json",
     },
-    body: JSON.stringify({ title, description, category, id }),
   });
 
   const json = await response.json();

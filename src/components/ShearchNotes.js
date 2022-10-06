@@ -26,8 +26,7 @@ export const SearchNotes = () => {
         className="inputSearchNotes"
       ></input>
 
-      <ul>
-        <hr></hr>
+      <ul className="ulsearch">
         {results.map((note) => (
           <li key={note.id} className="liSearch">
             <Note note={note}></Note>

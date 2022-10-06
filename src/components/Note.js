@@ -1,6 +1,7 @@
 export const Note = ({ note }) => {
   return (
     <section className="articleNoteSearch">
+      <hr></hr>
       <p>
         <strong>Site:</strong> {note.title}
       </p>

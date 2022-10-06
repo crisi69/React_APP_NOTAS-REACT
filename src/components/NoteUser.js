@@ -11,9 +11,6 @@ export const NoteUser = ({ note }) => {
         <strong>Description:</strong> {note.description}
       </p>
       <p>
-        <strong>Photo:</strong> {note.photo}
-      </p>
-      <p>
         <strong>Day:</strong> {new Date(note.createdAt).toLocaleString()}
       </p>
     </article>

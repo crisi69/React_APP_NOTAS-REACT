@@ -7,6 +7,7 @@ export const NewNote = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
+  const [image, setImage] = useState();
   const { token } = useContext(AuthContext);
 
   const handleForm = async (e) => {
@@ -16,7 +17,8 @@ export const NewNote = () => {
       const note = sendNoteService({ data, token });
       console.log(note);
       setSending(true);
-
+      e.target.reset();
+      setImage(null);
       navigate("/notes");
     } catch (error) {
       setError(error.message);
@@ -68,7 +70,17 @@ export const NewNote = () => {
           required
           placeholder="Image"
           accept="Image/*"
+          onChange={(e) => setImage(e.target.files[0])}
         ></input>
+        {image ? (
+          <figure>
+            <img
+              src={URL.createObjectURL(image)}
+              alt="Preview"
+              style={{ width: "100px" }}
+            ></img>
+          </figure>
+        ) : null}
       </fieldset>
 
       <button>Send Note</button>
