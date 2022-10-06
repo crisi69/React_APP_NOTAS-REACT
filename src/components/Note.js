@@ -9,6 +9,9 @@ export const Note = ({ note }) => {
         <strong>Category:</strong> {note.category}
       </p>
       <p>
+        <strong>Place:</strong> {note.place}
+      </p>
+      <p>
         <strong>Description:</strong> {note.description}
       </p>
       <p>

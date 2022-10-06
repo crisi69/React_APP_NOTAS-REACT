@@ -11,6 +11,7 @@ export const SearchNotes = () => {
     : notes.filter(
         (data) =>
           data.title.toLowerCase().includes(search.toLocaleLowerCase()) ||
+          data.place.toLowerCase().includes(search.toLocaleLowerCase()) ||
           data.category.toLowerCase().includes(search.toLocaleLowerCase()) ||
           data.description.toLowerCase().includes(search.toLocaleLowerCase()) ||
           data.createdAt.toLowerCase().includes(search.toLocaleLowerCase())
