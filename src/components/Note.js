@@ -19,6 +19,7 @@ export const Note = ({ note }) => {
       </p>
       {note.image ? (
         <img
+          className="imageArticle"
           src={`${process.env.REACT_APP_BACKEND}/${note.image}`}
           alt={note.text}
         ></img>
