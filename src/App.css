@@ -14,7 +14,6 @@ main {
   padding: 0rem;
   margin: 0rem;
   background-color: rgb(224, 204, 163);
-  
 }
 .header {
   margin: 0rem;
@@ -22,8 +21,6 @@ main {
   background-image: url("../src/assets/header.jpg");
   background-size: cover;
   width: 100%;
- 
-
 }
 .getstarted {
   width: 120px;
@@ -32,7 +29,6 @@ main {
   border-color: rgb(145, 137, 137);
   background-color: aliceblue;
   color: rgb(135, 128, 128)
-  
 }
 .getstarted:hover {
   width: 120px;
@@ -66,16 +62,13 @@ hr {
   height: 5px;
   width: 100%;
   color: rgb(255, 255, 255);
-
 }
 
 .PaginaInicio {
   margin: 10px;
   text-align: center;
 }
-
 .articleNoteUSer {
-
   width: 90%;
   display: grid;
   margin: 2%;
@@ -87,39 +80,27 @@ hr {
   border-radius: 2rem;
   border: 2%;
   border-style: solid; color: rgb(11, 11, 43);
-  
 }
 .articleNoteSearch {
-  
   background-size: 100%;
-  width: 35%;
+  width: 50%;
   margin: 1% auto;
   padding: 4% auto;
   background-color: rgb(214, 214, 214);
   color: black;
   border-style: solid; color: rgb(11, 11, 43);
-  
-  
 }
 .imageArticle {
- width: 300px
-
-
- 
+ width: 500px 
 }
-
-
 .ulActions li img {
-  
   transition: background-color .5s;
   border-radius: 2rem;
   padding: 10px;
   width: 5%;
   list-style: none;
-  
 }
 .ulActions li img:hover {
-
   background-color: rgb(255, 255, 255);
   transition: background-color .5s;
   padding: 10px;
@@ -129,18 +110,15 @@ hr {
   cursor : pointer;
 }
 .SearchNotes{
-
   text-align: center;
   margin: 1rem;
   font-size: 1rem;
   width: 15%;
   border-radius: 2%;
-
 }
 
 .liSearch {
-  display: grid
-  
+  display: grid 
 }
 
 ul {
@@ -148,7 +126,6 @@ ul {
 }
 
 form {
- 
   margin: 4%;
   align-items: center;
   text-align: center;
@@ -160,7 +137,6 @@ form {
   border: solid;
   border-radius: 6%;
   border-color: rgb(11, 11, 43);
-  
 }
 
 button {
@@ -176,8 +152,6 @@ button:hover {
   background-color: rgb(69, 157, 197);
   cursor: pointer;
 }
-
-
 fieldset {
   margin: 1%;
   padding: 1%;
@@ -186,17 +160,14 @@ fieldset input {
   width: 90%;
   padding: 2%;
 }
-
 textarea {
   width: 80%;
   padding: 2%;
-  
 }
 select {
   width: 80%;
   padding: 2%;
 }
-
 h3 {
   color: rgb(0, 0, 0);
 }
@@ -216,86 +187,88 @@ h4 {
   border: 3%;
   border-style: solid; color: rgb(19, 19, 68);
 }
-.imageArticle {
-  width: 120px
- 
- 
-  
- }
+
 
 .ulhomeListCreate li img {
-  
-margin: 1rem;
-width: 10%;
-border-radius: 2rem; 
-list-style: none; 
+  margin: 1rem;
+  width: 10%;
+  border-radius: 2rem; 
+  list-style: none; 
 }
 .ulhomeListCreate li img:hover {
-margin: 1rem;
-width: 4%;
-border-radius: 2rem;
-background: border-box;
-background-color: rgb(255, 255, 255);
-transition: background-color .5s;
-list-style: none;
-cursor: pointer;
+  margin: 1rem;
+  width: 4%;
+  border-radius: 2rem;
+  background: border-box;
+  background-color: rgb(255, 255, 255);
+  transition: background-color .5s;
+  list-style: none;
+  cursor: pointer;
 }
 .ulLoginRegisterHome li img {
-margin: 1rem;
-width: 10%;
-list-style: none;
+  margin: 1rem;
+  width: 10%;
+  list-style: none;
 }
 .ulLoginRegisterHome li img:hover {
-  
-margin: 1rem;
-width: 4%;
-border-radius: 2rem;
-background: border-box;
-background-color: rgb(255, 255, 255);
-transition: background-color .5s;
-list-style: none;
-cursor: pointer;
+  margin: 1rem;
+  width: 4%;
+  border-radius: 2rem;
+  background: border-box;
+  background-color: rgb(255, 255, 255);
+  transition: background-color .5s;
+  list-style: none;
+  cursor: pointer;
 }
   
 form {
-margin: auto;
-  
-align-items: center;
-text-align: center;
-width: 50%;
-  
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  width: 50%;
   height: 30%;
-  
   background-color: aliceblue;
   color: black;
   margin: auto;
   padding: 2%;
   border-radius: 1rem;
   border-color: darkblue;
-
   }
 
-  fieldset {
-    width: 40;
-    margin: 1%;
-    padding: 1%;
+fieldset {
+  width: 40;
+  margin: 1%;
+  padding: 1%;
   
-  }
-  input {
-    width: 60%;
-    padding: 2%;
-  }
+}
+input {
+  width: 60%;
+  padding: 2%;
+}
   
-  textarea {
-    width: 60%;
-    padding: 2%;
+textarea {
+  width: 60%;
+  padding: 2%;
     
     
-  }
-  select {
-    width: 20%;
-    padding: 2%;
-  } 
+}
+select {
+  width: 20%;
+  padding: 2%;
+} 
+
+.articleNoteSearch {
+  background-size: 100%;
+  width: 80%;
+  margin: 1% auto;
+  padding: 4% auto;
+  background-color: rgb(214, 214, 214);
+  color: black;
+  border-style: solid; color: rgb(11, 11, 43);
+}
+.imageArticle {
+  width: 250px
+ }
 }
 
  

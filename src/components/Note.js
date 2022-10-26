@@ -14,9 +14,7 @@ export const Note = ({ note }) => {
       <p>
         <strong>Description:</strong> {note.description}
       </p>
-      <p>
-        <strong>Day:</strong> {new Date(note.createdAt).toLocaleString()}
-      </p>
+
       {note.image ? (
         <img
           className="imageArticle"
@@ -24,6 +22,9 @@ export const Note = ({ note }) => {
           alt={note.text}
         ></img>
       ) : null}
+      <p>
+        <strong>Day:</strong> {new Date(note.createdAt).toLocaleString()}
+      </p>
       <hr></hr>
     </section>
   );
