@@ -58,35 +58,35 @@ main {
 }
 
 hr {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(50, 50, 50);
   height: 5px;
   width: 100%;
-  color: rgb(255, 255, 255);
+  color: rgb(89, 85, 85);
 }
 
 .PaginaInicio {
-  margin: 10px;
+  margin: 0px;
   text-align: center;
 }
 .articleNoteUSer {
   width: 90%;
   display: grid;
-  margin: 2%;
-  padding: 2%;
-  border-radius: 1rem; 
+  margin: 2% auto;
+  padding: 2% auto;
+
   background-color: rgb(255, 255, 255);
   border-color: black; 
   color: black;
-  border-radius: 2rem;
+
   border: 2%;
   border-style: solid; color: rgb(11, 11, 43);
 }
 .articleNoteSearch {
   background-size: 100%;
   width: 50%;
-  margin: 1% auto;
+  margin: 2% auto;
   padding: 4% auto;
-  background-color: rgb(214, 214, 214);
+  background-color: rgb(226, 226, 226);
   color: black;
   border-style: solid; color: rgb(11, 11, 43);
 }
@@ -97,14 +97,14 @@ hr {
   transition: background-color .5s;
   border-radius: 2rem;
   padding: 10px;
-  width: 5%;
+  width: 50px;
   list-style: none;
 }
 .ulActions li img:hover {
   background-color: rgb(255, 255, 255);
   transition: background-color .5s;
   padding: 10px;
-  width: 5%;
+  width: 50px;
   padding: 10px;
   list-style: none;
   cursor : pointer;
@@ -268,6 +268,23 @@ select {
 .imageArticle {
   width: 250px
  }
+ .ulActions li img li img {
+  margin: 1%;
+  width: 20%;
+  border-radius: 2rem; 
+  list-style: none; 
+}
+.ulActions li img:hover {
+  margin: 1%;
+  width: 8%;
+  border-radius: 2rem;
+  background: border-box;
+  background-color: rgb(255, 255, 255);
+  transition: background-color .5s;
+  list-style: none;
+  cursor: pointer;
+}
+
 }
 
  
